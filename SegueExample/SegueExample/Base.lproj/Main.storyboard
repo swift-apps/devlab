@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Segue View Controller-->
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pam-W0-TuS">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pam-W0-TuS">
                                 <rect key="frame" x="257" y="208" width="86" height="30"/>
                                 <state key="normal" title="Segue Only">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,17 +43,26 @@
                                     <action selector="movePage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A04-ZJ-eKU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9i-8E-rPW">
+                                <rect key="frame" x="255" y="155" width="91" height="30"/>
+                                <state key="normal" title="Modal Seque">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rXF-yq-Ek9" kind="presentation" identifier="segueNext2" id="qLj-pp-zHN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="pam-W0-TuS" secondAttribute="centerX" id="ErI-Aq-YdS"/>
+                            <constraint firstAttribute="centerX" secondItem="O9i-8E-rPW" secondAttribute="centerX" constant="-0.5" id="GD7-Um-Obj"/>
                             <constraint firstAttribute="centerX" secondItem="PyQ-hF-kqV" secondAttribute="centerX" id="MRk-dh-K24"/>
                             <constraint firstAttribute="centerX" secondItem="tFV-zV-8l8" secondAttribute="centerX" id="P00-vt-AID"/>
+                            <constraint firstItem="O9i-8E-rPW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="135" id="e0Y-eg-oTM"/>
+                            <constraint firstItem="pam-W0-TuS" firstAttribute="top" secondItem="O9i-8E-rPW" secondAttribute="bottom" constant="23" id="vqj-ku-fBc"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="rXF-yq-Ek9" kind="show" identifier="segueNext2" id="MlK-Y7-w1E"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,6 +108,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SMD-WO-tM4"/>
+        <segue reference="qLj-pp-zHN"/>
     </inferredMetricsTieBreakers>
 </document>

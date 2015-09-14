@@ -21,7 +21,7 @@ class SegueViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc: NextPageViewController = segue.destinationViewController as NextPageViewController
+        let vc: NextPageViewController = segue.destinationViewController as! NextPageViewController
         
         if("segueNext" == segue.identifier)
         {
@@ -43,7 +43,7 @@ class SegueViewController: UIViewController {
 
     @IBAction func movePage(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let nextViewController = storyboard.instantiateViewControllerWithIdentifier("NextView") as NextPageViewController
+        let nextViewController = storyboard.instantiateViewControllerWithIdentifier("NextView") as! NextPageViewController
         self.presentViewController(nextViewController, animated: true, completion: nil)
     }
 }
