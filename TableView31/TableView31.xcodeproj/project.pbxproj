@@ -15,7 +15,9 @@
 		A65631291BB165F1006AA858 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65631281BB165F1006AA858 /* FirstTableViewController.swift */; };
 		A656312B1BB1664B006AA858 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A656312A1BB1664B006AA858 /* FirstViewController.swift */; };
 		A656312D1BB17093006AA858 /* MyCell1_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A656312C1BB17093006AA858 /* MyCell1_2.swift */; };
-		A65631311BB183B4006AA858 /* SecondTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65631301BB183B4006AA858 /* SecondTableView.swift */; };
+		A65631311BB183B4006AA858 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65631301BB183B4006AA858 /* SecondTableViewController.swift */; };
+		A682DE571BB7780100A4319D /* MyCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A682DE551BB7780100A4319D /* MyCell2.swift */; };
+		A682DE581BB7780100A4319D /* MyCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A682DE561BB7780100A4319D /* MyCell2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,9 @@
 		A65631281BB165F1006AA858 /* FirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
 		A656312A1BB1664B006AA858 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		A656312C1BB17093006AA858 /* MyCell1_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell1_2.swift; sourceTree = "<group>"; };
-		A65631301BB183B4006AA858 /* SecondTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableView.swift; sourceTree = "<group>"; };
+		A65631301BB183B4006AA858 /* SecondTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
+		A682DE551BB7780100A4319D /* MyCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell2.swift; sourceTree = "<group>"; };
+		A682DE561BB7780100A4319D /* MyCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCell2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +95,9 @@
 				A65631281BB165F1006AA858 /* FirstTableViewController.swift */,
 				A656312A1BB1664B006AA858 /* FirstViewController.swift */,
 				A656312C1BB17093006AA858 /* MyCell1_2.swift */,
-				A65631301BB183B4006AA858 /* SecondTableView.swift */,
+				A65631301BB183B4006AA858 /* SecondTableViewController.swift */,
+				A682DE551BB7780100A4319D /* MyCell2.swift */,
+				A682DE561BB7780100A4319D /* MyCell2.xib */,
 			);
 			path = TableView31;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A682DE581BB7780100A4319D /* MyCell2.xib in Resources */,
 				A656310E1BB16394006AA858 /* Main.storyboard in Resources */,
 				A65631131BB16394006AA858 /* LaunchScreen.xib in Resources */,
 				A65631101BB16394006AA858 /* Images.xcassets in Resources */,
@@ -221,10 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A682DE571BB7780100A4319D /* MyCell2.swift in Sources */,
 				A65631091BB16394006AA858 /* AppDelegate.swift in Sources */,
 				A65631291BB165F1006AA858 /* FirstTableViewController.swift in Sources */,
 				A656312D1BB17093006AA858 /* MyCell1_2.swift in Sources */,
-				A65631311BB183B4006AA858 /* SecondTableView.swift in Sources */,
+				A65631311BB183B4006AA858 /* SecondTableViewController.swift in Sources */,
 				A656312B1BB1664B006AA858 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +427,7 @@
 				A65631241BB16394006AA858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A65631251BB16394006AA858 /* Build configuration list for PBXNativeTarget "TableView31Tests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +436,7 @@
 				A65631271BB16394006AA858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -42,4 +42,11 @@ class FirstTableViewController: UITableViewController {
         //cell.textLabel?.text = "George"
         
         return cell
-    }}
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(indexPath.section == 1) {
+           self.performSegueWithIdentifier("mySeque", sender: self)
+        }
+    }
+}

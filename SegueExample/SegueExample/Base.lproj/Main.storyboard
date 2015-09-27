@@ -25,15 +25,6 @@
                                     <segue destination="rXF-yq-Ek9" kind="show" identifier="segueNext" id="SMD-WO-tM4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyQ-hF-kqV">
-                                <rect key="frame" x="257" y="255" width="86" height="30"/>
-                                <state key="normal" title="Perform">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTD-T2-sA0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFV-zV-8l8">
                                 <rect key="frame" x="257" y="305" width="87" height="30"/>
                                 <state key="normal" title="MovePage">
@@ -41,6 +32,15 @@
                                 </state>
                                 <connections>
                                     <action selector="movePage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A04-ZJ-eKU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyQ-hF-kqV">
+                                <rect key="frame" x="258" y="255" width="86" height="30"/>
+                                <state key="normal" title="Perform">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTD-T2-sA0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,6 +99,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SMD-WO-tM4"/>
+        <segue reference="MlK-Y7-w1E"/>
     </inferredMetricsTieBreakers>
 </document>
