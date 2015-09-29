@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E0823CF7-E89C-4F42-BDC4-192D557B9FE5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SegueExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5123C2946EAF3B78A189B61A6491428700BAAAF5</key>
+		<string>https://github.com/swift-apps/devlab.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SegueExample/SegueExample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5123C2946EAF3B78A189B61A6491428700BAAAF5</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/swift-apps/devlab.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5123C2946EAF3B78A189B61A6491428700BAAAF5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5123C2946EAF3B78A189B61A6491428700BAAAF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>devlab</string>
+		</dict>
+	</array>
+</dict>
+</plist>
