@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         let str = "abcdef1235554646356465465413513516351654165116313g"
         let sha1Digest = str.hmacsha1("abcd")
-        println("~~~~~"+sha1Digest)
+        print("~~~~~"+sha1Digest)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +36,7 @@ extension String {
         let digestLength = Int(CC_SHA1_DIGEST_LENGTH)
         let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLength)
         
-        CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), secretKey!.bytes, UInt(secretKey!.length), dataToDigest!.bytes, UInt(dataToDigest!.length), result)
+        CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), secretKey!.bytes, Int(secretKey!.length), dataToDigest!.bytes, Int(dataToDigest!.length), result)
         
         //return NSData(bytes: result, length: digestLength)
         let digest = stringFromResult(result, length: digestLength)
@@ -46,7 +46,7 @@ extension String {
         
     }
     private func stringFromResult(result: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String {
-        var hash = NSMutableString()
+        let hash = NSMutableString()
         for i in 0..<length {
             hash.appendFormat("%02x", result[i])
         }
