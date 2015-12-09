@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VeiwTest2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="VeiwTest2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,7 +32,7 @@
                                         <rect key="frame" x="166" y="75" width="51" height="31"/>
                                         <animations/>
                                         <connections>
-                                            <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nKa-oh-yQ2"/>
+                                            <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="x4P-Hk-9ms"/>
                                         </connections>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGt-X4-Amq" userLabel="btnStarted">
@@ -41,7 +41,7 @@
                                         <color key="backgroundColor" red="0.50141683790000002" green="0.72872496909999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Get Started"/>
                                         <connections>
-                                            <action selector="btnStartedOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eaO-mq-Ppi"/>
+                                            <action selector="btnStartedOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Cv-yJ-Gm7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -54,8 +54,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="btnStarted" destination="BGt-X4-Amq" id="spE-8K-fdg"/>
-                        <outlet property="swichIsVerified" destination="Bki-9d-gMJ" id="tI3-iX-mai"/>
+                        <outlet property="btnStarted" destination="BGt-X4-Amq" id="wMa-vB-20y"/>
+                        <outlet property="swichIsVerified" destination="Bki-9d-gMJ" id="a3h-g1-7HM"/>
                         <segue destination="620-SX-awY" kind="show" identifier="SyncCodeSegue" animates="NO" id="xrL-BX-ikC"/>
                         <segue destination="Rof-x2-46R" kind="show" identifier="NewShieldCodeSegue" animates="NO" id="zbF-Yd-Gfo"/>
                     </connections>
@@ -142,30 +142,49 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="pin1ValueChanged:" destination="Rof-x2-46R" eventType="editingChanged" id="alZ-nK-t2r"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0hZ-E3-Rwl" userLabel="pin3">
                                 <rect key="frame" x="202" y="199" width="50" height="45"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="pin3ValueChanged:" destination="Rof-x2-46R" eventType="editingChanged" id="DBr-A8-VcQ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nwp-ma-81T" userLabel="pin4">
                                 <rect key="frame" x="287" y="199" width="50" height="45"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="pin4ValueChanged:" destination="Rof-x2-46R" eventType="editingChanged" id="h00-EW-Xz5"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lq9-GC-m1K" userLabel="pin2">
                                 <rect key="frame" x="115" y="199" width="50" height="44"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="pin2ValueChanged:" destination="Rof-x2-46R" eventType="editingChanged" id="kOB-3R-Rfa"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pin1" destination="Hna-4u-CUI" id="l76-GD-wKa"/>
+                        <outlet property="pin2" destination="lq9-GC-m1K" id="UkG-cl-ncv"/>
+                        <outlet property="pin3" destination="0hZ-E3-Rwl" id="n0c-0r-hCD"/>
+                        <outlet property="pin4" destination="nwp-ma-81T" id="vdH-yn-bhv"/>
+                        <segue destination="lb3-6l-uyJ" kind="show" identifier="ConfirmPinCodeSegue" animates="NO" id="fPP-pZ-vO1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbc-U8-iuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,7 +263,7 @@
                         <outlet property="pin2" destination="31l-Ja-oGC" id="FAe-ml-ei1"/>
                         <outlet property="pin3" destination="ln8-PT-qM3" id="aAZ-Eh-lxY"/>
                         <outlet property="pin4" destination="sKd-sp-wCS" id="l2M-GD-6iE"/>
-                        <segue destination="8hq-AU-4UG" kind="show" identifier="CreateShieldCode" animates="NO" id="wkY-Jj-GNA"/>
+                        <segue destination="8hq-AU-4UG" kind="show" identifier="CreateShieldCode" animates="NO" id="huU-vw-3v0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqH-aM-LF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,6 +316,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lblShieldCode" destination="Dvl-G5-lId" id="3c1-dh-scm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ao-TN-d4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,10 +11,10 @@ import UIKit
 class CheckPinViewController: UIViewController,UITextFieldDelegate {
     
     // MARK: outlets
-//    @IBOutlet weak var pin1:UITextField!
-//    @IBOutlet weak var pin2:UITextField!
-//    @IBOutlet weak var pin3:UITextField!
-//    @IBOutlet weak var pin4:UITextField!
+    @IBOutlet weak var pin1:UITextField!
+    @IBOutlet weak var pin2:UITextField!
+    @IBOutlet weak var pin3:UITextField!
+    @IBOutlet weak var pin4:UITextField!
 
     
     override func viewDidLoad() {
@@ -31,28 +31,28 @@ class CheckPinViewController: UIViewController,UITextFieldDelegate {
     }
     
     // MARK: events
-//    @IBAction func pin1ValueChanged(sender: AnyObject) {
-//        if(pin1.text?.utf16.count >= 1) {
-//            pin2.becomeFirstResponder()
-//        }
-//    }
-//    @IBAction func pin2ValueChanged(sender: AnyObject) {
-//        if(pin2.text?.utf16.count >= 1) {
-//            pin3.becomeFirstResponder()
-//        }
-//    }
-//    @IBAction func pin3ValueChanged(sender: AnyObject) {
-//        if(pin3.text?.utf16.count >= 1) {
-//            pin4.becomeFirstResponder()
-//        }
-//    }
-//    @IBAction func pin4ValueChanged(sender: AnyObject) {
-//        if(pin4.text?.utf16.count >= 1) {
-//            print("Done");
-//            pin4.resignFirstResponder()
-//            performSegueWithIdentifier("ConfirmPinCodeSegue", sender: self)
-//        }
-//    }
+    @IBAction func pin1ValueChanged(sender: AnyObject) {
+        if(pin1.text?.utf16.count >= 1) {
+            pin2.becomeFirstResponder()
+        }
+    }
+    @IBAction func pin2ValueChanged(sender: AnyObject) {
+        if(pin2.text?.utf16.count >= 1) {
+            pin3.becomeFirstResponder()
+        }
+    }
+    @IBAction func pin3ValueChanged(sender: AnyObject) {
+        if(pin3.text?.utf16.count >= 1) {
+            pin4.becomeFirstResponder()
+        }
+    }
+    @IBAction func pin4ValueChanged(sender: AnyObject) {
+        if(pin4.text?.utf16.count >= 1) {
+            print("Done");
+            pin4.resignFirstResponder()
+            performSegueWithIdentifier("ConfirmPinCodeSegue", sender: self)
+        }
+    }
     
     
     /*

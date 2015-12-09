@@ -11,14 +11,17 @@ import UIKit
 
 class CreateShieldCodeViewController: UIViewController {
 
+    @IBOutlet weak var lblShieldCode: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     
-        //let str = "abcdef1235554646356465465413513516351654165116313g"
-        //let sha1Digest = str.hmacsha1("abcd")
-        
+        let str = "abcdef1235554646356465465413513516351654165116313g"
+        let sha1Digest = str.hmacsha1("abcd")
+        //print("~~~~~"+sha1Digest)
+        lblShieldCode.text = sha1Digest
     }
 
     override func didReceiveMemoryWarning() {

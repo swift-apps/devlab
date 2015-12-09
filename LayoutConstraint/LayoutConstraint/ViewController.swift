@@ -13,15 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let btnCenter = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        btnCenter.frame = CGRectMake(100,100,100,50)
-        btnCenter.backgroundColor = UIColor.greenColor()
-        btnCenter.setTitle("Center", forState: UIControlState.Normal)
-        
-        btnCenter.addTarget(self, action: "btnCenterOnClick:", forControlEvents: UIControlEvents.TouchUpInside)
-        btnCenter.setTranslatesAutoresizingMaskIntoConstraints(false)
-        
-        self.view.addSubview(btnCenter)
+//        let btnCenter = UIButton.buttonWithType(UIButtonType.System) as UIButton
+//        btnCenter.frame = CGRectMake(100,100,100,50)
+//        btnCenter.backgroundColor = UIColor.greenColor()
+//        btnCenter.setTitle("Center", forState: UIControlState.Normal)
+//        
+//        btnCenter.addTarget(self, action: "btnCenterOnClick:", forControlEvents: UIControlEvents.TouchUpInside)
+//        btnCenter.setTranslatesAutoresizingMaskIntoConstraints(false)
+//        
+//        self.view.addSubview(btnCenter)
         
         //let horizotalConstraint = NSLayoutConstraint(item: btnCenter, attribute: NSLayoutAttribute.CenterX, relatedBy : NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
         
@@ -40,12 +40,12 @@ class ViewController: UIViewController {
         //view.addConstraint(widthConstraint)
         //view.addConstraint(heightConstraint)
         
-        let views = ["view" : view, "btnCenter" : btnCenter]
-        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:[view]-(<=0)-[btnCenter(100)]", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: views)
-        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-(<=0)-[btnCenter(100)]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views)
-        
-        view.addConstraints(horizontalConstraints)
-        view.addConstraints(verticalConstraints)
+//        let views = ["view" : view, "btnCenter" : btnCenter]
+//        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:[view]-(<=0)-[btnCenter(100)]", options: NSLayoutFormatOptions.AlignAllCenterY, metrics: nil, views: views)
+//        let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:[view]-(<=0)-[btnCenter(100)]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views)
+//        
+//        view.addConstraints(horizontalConstraints)
+//        view.addConstraints(verticalConstraints)
     }
 
     override func didReceiveMemoryWarning() {
