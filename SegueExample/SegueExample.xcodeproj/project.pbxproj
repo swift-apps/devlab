@@ -159,6 +159,7 @@
 		A688E5BC1BA27EB200FE883E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Jeff Lee";
 				TargetAttributes = {
@@ -411,6 +412,7 @@
 				A688E5E51BA27EB200FE883E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A688E5E61BA27EB200FE883E /* Build configuration list for PBXNativeTarget "SegueExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +421,7 @@
 				A688E5E81BA27EB200FE883E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

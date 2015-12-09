@@ -156,6 +156,7 @@
 		A6FCC2D21B9EB80800696827 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Jeff Lee";
 				TargetAttributes = {
@@ -407,6 +408,7 @@
 				A6FCC2FB1B9EB80900696827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6FCC2FC1B9EB80900696827 /* Build configuration list for PBXNativeTarget "TabViewTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +417,7 @@
 				A6FCC2FE1B9EB80900696827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

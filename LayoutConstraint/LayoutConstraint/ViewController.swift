@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 
     @IBAction func btnCenterOnClick(sender: UIButton)
     {
-        var btnCenter = sender as UIButton
+        let btnCenter = sender as UIButton
         btnCenter.setTitle("Hello", forState: UIControlState.Normal)
     }
 

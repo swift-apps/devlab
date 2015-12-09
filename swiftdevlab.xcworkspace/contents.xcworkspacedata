@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:VeiwTest2/VeiwTest2.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TabView/TabView.xcodeproj">
    </FileRef>
    <FileRef

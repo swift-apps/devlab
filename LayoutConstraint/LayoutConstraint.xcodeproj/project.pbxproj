@@ -156,6 +156,8 @@
 		A6FCC3001B9EB83900696827 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Jeff Lee";
 				TargetAttributes = {
@@ -407,6 +409,7 @@
 				A6FCC3291B9EB83900696827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6FCC32A1B9EB83900696827 /* Build configuration list for PBXNativeTarget "LayoutConstraintTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +418,7 @@
 				A6FCC32C1B9EB83900696827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
