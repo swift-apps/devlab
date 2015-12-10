@@ -22,7 +22,7 @@ class CheckPinViewController: UIViewController,UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         //self.pin1.delegate = self
-        //pin1.becomeFirstResponder()
+        pin1.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,13 +48,21 @@ class CheckPinViewController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func pin4ValueChanged(sender: AnyObject) {
         if(pin4.text?.utf16.count >= 1) {
-            print("Done");
+            //print("Done");
             pin4.resignFirstResponder()
             performSegueWithIdentifier("ConfirmPinCodeSegue", sender: self)
         }
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        // Create a new variable to store the instance of the next view controller
+        let destinationVC = segue.destinationViewController as! ConfirmPinViewController
+        destinationVC.pwd1 = pin1.text
+        destinationVC.pwd2 = pin2.text
+        destinationVC.pwd3 = pin3.text
+        destinationVC.pwd4 = pin4.text
+    }
     /*
     // MARK: - Navigation
 

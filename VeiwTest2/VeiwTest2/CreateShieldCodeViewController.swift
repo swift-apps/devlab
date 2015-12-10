@@ -12,24 +12,55 @@ import UIKit
 class CreateShieldCodeViewController: UIViewController {
 
     @IBOutlet weak var lblShieldCode: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+    var progressCount:Int32 = 100;
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    
-        let str = "abcdef1235554646356465465413513516351654165116313g"
-        let sha1Digest = str.hmacsha1("abcd")
-        //print("~~~~~"+sha1Digest)
-        lblShieldCode.text = sha1Digest
+        progressView.setProgress(1.0, animated: false)
+        resetPassword()
+        
+        NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("resetPassword"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: Selector("resetProgressView"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    func resetProgressView()
+    {
+        if (progressCount < 0) {
+            progressCount = 100;
+            progressView.setProgress(1.0, animated: false)
+        }
+        
+        let fractionalProgress = Float(progressCount) / 100.0
+        progressView.setProgress(fractionalProgress, animated: true)
+        
+        progressCount--
+    }
+    
+    func resetPassword() {
+        let factor = Generator.Factor.Timer(period: 30)
+        let secret = "09876543210987654321".dataUsingEncoding(NSASCIIStringEncoding)!
+        let algorithm = Generator.Algorithm.SHA512
+        let digits = 7
+        
+        let date = NSDate()
+        let timestamp = floor(date.timeIntervalSince1970 * 1000)
+        
+        let generator = Generator(
+            factor: factor,
+            secret: secret,
+            algorithm: algorithm,
+            digits: digits
+        )
+        let password = generator.flatMap { try? $0.passwordAtTime(timestamp) }
+        lblShieldCode.text = password
+    }
     
     /*
     // MARK: - Navigation
@@ -41,31 +72,4 @@ class CreateShieldCodeViewController: UIViewController {
     }
     */
 
-}
-
-extension String {
-    func hmacsha1(key: String) -> String {
-        
-        let dataToDigest = self.dataUsingEncoding(NSUTF8StringEncoding)
-        let secretKey = key.dataUsingEncoding(NSUTF8StringEncoding)
-        
-        let digestLength = Int(CC_SHA1_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLength)
-        
-        CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), secretKey!.bytes, Int(secretKey!.length), dataToDigest!.bytes, Int(dataToDigest!.length), result)
-        
-        //return NSData(bytes: result, length: digestLength)
-        let digest = stringFromResult(result, length: digestLength)
-        result.dealloc(digestLength)
-        
-        return digest
-        
-    }
-    private func stringFromResult(result: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String {
-        let hash = NSMutableString()
-        for i in 0..<length {
-            hash.appendFormat("%02x", result[i])
-        }
-        return String(hash)
-    }
 }
